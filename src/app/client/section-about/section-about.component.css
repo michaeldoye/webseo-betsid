@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.lead-text {
+  line-height: 34px;
+}
+
+.lead-text p {
+  font-size: 150%;
+}
+
+h2.lead-title {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-size: 150%;
+}
+
+.lead-image-right img {
+  margin-top: 120px;
+}
+
+.coming-soon {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.coming-soon p {
+  font-size: 150%;
+}
+
+.coming-soon h2 {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  font-size: 150%;
+}
+
+button.coming-soon-button {
+  color: #308ded;
+}
+
+
+@media only screen and (max-width: 599px) {
+  .lead-image-right img {
+    max-width: 100%;
+    margin-top: 0px!important;
+  } 
+  .lead-text {
+    text-align: center;
+    padding: 20px;
+  }
+  .coming-soon p {
+    font-size: 150%!important;
+    padding: 20px;
+  }  
+}

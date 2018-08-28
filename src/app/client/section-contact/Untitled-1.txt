@@ -1,0 +1,4 @@
+user selects location
+enters submit
+hidden feild used for send to - autmatically populated from map database.
+bcc address 

@@ -1,0 +1,83 @@
+:host {
+  display: block;
+}
+
+.commission-top-image img {
+  max-width: 250px;
+}
+
+.commission-top-text h3 {
+  font-size: 150%;
+  text-transform: uppercase;
+}
+
+.commission-top-text p {
+  font-size: 150%;
+  line-height: 34px;
+}
+
+.graph-image img {
+  width: 85%;
+}
+
+.graph-right {
+  background: #308ded;
+  padding-bottom: 10px;
+}
+
+.graph-right p {
+  color: white;
+  font-size: 200%;
+  text-align: center;
+  padding: 10px;
+}
+
+.graph-right button {
+  color: white;
+}
+
+.graph-image {
+  background: #161a25;
+  padding: 20px;
+}
+
+.commission-graph-row {
+  margin-bottom: 35px;
+}
+
+.graph-image h2 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+li.blue {
+  color: #5fb5ff;
+}
+
+li.green {
+  color: #46e0a0;
+}
+
+li.red {
+  color: #ffafae;
+}
+
+li.yellow {
+  color: #f2d19e;
+}
+
+.graph-wrapper ul li span {
+  font-weight: bold;
+}
+
+.graph-wrapper ul li {
+  line-height: 35px;
+  font-size: 120%;
+}
+
+@media only screen and (max-width: 599px) { 
+  .commission-top-text {
+    text-align: center;
+  }  
+}

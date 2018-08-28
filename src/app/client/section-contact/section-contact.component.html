@@ -1,0 +1,39 @@
+<h1 class="section-heading">Contact Us</h1>
+<p class="lead-text">Have a question? Get in touch with our affiliate team. We’re looking forward to working with you to earn great commissions with BetSid.</p>
+
+<div class="form" fxLayout="row" fxLayoutAlign="center center">
+  <form class="example-container" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)" [formGroup]="form" fxFlex="60%" fxFlex.xs="90%">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Your Full Name" formControlName="name">
+      <mat-error *ngIf="name.invalid">Please Enter Your Name</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Your Email Address" formControlName="email">
+      <mat-error *ngIf="email.invalid">Please Enter a Valid Email Address</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Subject</mat-label>      
+      <input matInput placeholder="Message Subject" formControlName="subject">
+      <mat-error *ngIf="subject.invalid">Please Enter Something</mat-error>
+    </mat-form-field>    
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea matInput #umessage maxlength="500" placeholder="How Can We Help" formControlName="message"></textarea>
+      <mat-hint align="end">{{umessage.value.length}} / 500</mat-hint>
+      <mat-error *ngIf="message.invalid">Please Enter Something</mat-error>
+    </mat-form-field>
+
+    <div class="captcha-wrapper">
+      <re-captcha (resolved)="resolved($event)" siteKey="6LfWmjYUAAAAAAtKrxFGiGEYpX_Qe5pM7p2GEHr7" formControlName="captcha"></re-captcha>
+    </div>
+    
+    <button [disabled]="form.invalid" mat-stroked-button type="submit" color="primary">
+      Send Message
+    </button>
+  </form>
+</div>

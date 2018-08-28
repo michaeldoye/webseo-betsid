@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+h1.section-heading {
+  color: white;
+}
+
+.card-wrapper mat-card {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.card-wrapper .text {
+  text-align: center;
+  font-size: 150%;
+  line-height: 34px;
+}
+
+.graph-image {
+  background: #161a25;
+}
+
+@media only screen and (max-width: 599px) { 
+  .card-wrapper mat-card {
+    width: 80%!important;
+  }
+}

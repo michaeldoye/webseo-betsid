@@ -1,20 +1,54 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- Top Section -->
+<div class="top-section" [class.marginb]="fixed">
+  <div class="logo-bar">
+    <div class="logo container" fxLayout.xs="column" fxLayoutAlign.xs="center center">
+      <img src="/assets/betsid-logo.png" />
+    </div>
+  </div>
+  <div class="menu-bar" [class.fixed]="fixed">
+    <div class="menu-items container" fxLayout="row" fxLayoutGap="25px">
+      <img *ngIf="fixed" width="100px" height="25px" src="/assets/betsid-logo.png" />
+      <span fxFlex></span>
+      <span (click)="scrollToSection('about')">About</span>
+      <span (click)="scrollToSection('why')">Why Betsid</span>
+      <span (click)="scrollToSection('comm')">Commission</span>
+      <!-- <span (click)="scrollToSection('testi')">Testimonials</span> -->
+      <span (click)="scrollToSection('contact')">Contact</span>
+    </div>
+  </div>
+  <div class="banner" style="background: url(/assets/athletes-banner.jpg)" fxLayout="column" fxLayoutAlign="center center">
+    <div class="banner-text" fxLayout="column" fxLayoutAlign="center center">
+      <h1>Earn up to 45% Commission</h1>
+      <button mat-stroked-button class="banner-button" (click)="scrollToSection('contact')">
+        <mat-icon>mail</mat-icon>
+        Get In Touch
+      </button>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<!-- About Section -->
+<app-section-about #about (contactClick)="scrollToSection('contact')"></app-section-about>
+
+<!-- Why BetSid Section -->
+<div class="why-section-wrapper" #why>
+  <app-section-why></app-section-why>
+</div>
+
+<!-- Commission Section -->
+<app-section-commission #comm (contactClick)="scrollToSection('contact')"></app-section-commission>
+
+<!-- Testimonial Section -->
+<!-- <div class="testimonial-section-wrapper" #testi>
+  <app-section-testimonials></app-section-testimonials>
+</div> -->
+
+<!-- Contact Section -->
+<div class="contact-section-wrapper" style="background: url(/assets/horses.jpg)" #contact>
+  <app-section-contact></app-section-contact>
+</div>
+
+<!-- Footer -->
+<div class="footer" fxLayout.xs="column" fxLayoutAlign.xs="center center">
+  <p>Copyright 2018 &copy; BetSid.com</p>
+</div>

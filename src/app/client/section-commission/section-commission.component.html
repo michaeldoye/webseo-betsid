@@ -1,0 +1,32 @@
+<h1 class="section-heading">Commission</h1>
+
+<div class="commission-row" fxLayout="row" fxLayout.xs="column">
+  <div class="commission-top-image" fxLayout="column" fxLayoutAlign="center center" fxFlex="55%">
+    <img src="/assets/GalaxyS6Front-HALF.png" />
+  </div>
+  <div class="commission-top-text">
+    <h3>Tiered Incentive Commission</h3>
+    <p>Choose from a variety of commission incentives and benefit from our exciting sign up promotions. Speak to your affiliate manager to find out more about our promotional offers</p>
+  </div>
+</div>
+
+<div class="commission-graph-row" fxLayout="row" fxLayout.xs="column">
+  <div class="graph-image" fxFlex="65%" fxLayout="column" fxLayoutAlign="center center">
+    <h2>Tiered Incentives</h2>
+    <div class="graph-wrapper" fxLayout="row" fxLayout.xs="column">
+      <img fxFlex="49%" src="/assets/graphsmall.jpg" />
+      <ul>
+        <li class="blue">0-10 Customers <span>20%</span></li>
+        <li class="green">10+ Customers <span>25%</span></li>
+        <li class="red">20+ Customers <span>30%</span></li>
+        <li class="yellow">50+ Customers <span>35%</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="graph-right" fxFlex="35%" fxLayout="column" fxLayoutAlign="center center">
+    <p>Earn up to 45% in your first month when you join our program</p>
+    <button mat-stroked-button (click)="contactClick.emit($event)">
+      Contact Us
+    </button>
+  </div>
+</div>

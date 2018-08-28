@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+h1.section-heading {
+  text-align: center;
+  color: white;
+}
+
+.item-icon img {
+  max-width: 80%;
+}
+
+.row-item p {
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+}
+
+.row-item .title {
+  text-transform: uppercase;
+  color: white!important;
+  text-align: center;
+  font-size: 150%;
+  font-weight: normal;
+}
+
+.row-item .text {
+  font-size: 120%;
+  padding: 0px 10px;
+}
+
+@media only screen and (max-width: 599px) {
+  .item-icon img {
+    max-width: 55%;
+  }
+}
